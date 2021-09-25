@@ -100,6 +100,9 @@
     <Compile Include="State\IRenavigator.cs" />
     <Compile Include="State\Navigator.cs" />
     <Compile Include="State\ViewModelDelegateRenavigator.cs" />
+    <Compile Include="Styles\Common.xaml.cs">
+      <DependentUpon>Common.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Factories\CurrencyViewModelFactory.cs" />
     <Compile Include="ViewModels\Factories\ICurrencyViewModelFactory.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -138,6 +141,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
