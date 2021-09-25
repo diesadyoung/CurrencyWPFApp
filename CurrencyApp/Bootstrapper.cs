@@ -1,4 +1,6 @@
 ﻿using Caliburn.Micro;
+using CurrencyApp.ViewModels;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +19,9 @@ namespace CurrencyApp
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<ShellViewModel>();
+            DisplayRootViewFor<MajorIndexViewModel>();
 
         }
+        
     }
 }
