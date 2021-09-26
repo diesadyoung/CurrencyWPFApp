@@ -31,17 +31,17 @@
         </Grid.RowDefinitions>
         
         
-        <Button x:Name="Update" Grid.Column="1" Grid.Row="1" Content="Обновить" HorizontalAlignment="Left" Width="95"/>
+        <Button x:Name="Update" Command="{Binding MajorIndexViewModel, BindingGroupName=Date}"  Grid.Column="1" Grid.Row="1" Content="Обновить" HorizontalAlignment="Left" Width="95"/>
 
-        <Button x:Name="Upload" Click="Upload_Click" Grid.Column="1" Grid.Row="1" Content="Загрузить" HorizontalAlignment="Right" Width="95"/>
+        <Button x:Name="Upload" Command="{Binding MajorIndexViewModel, BindingGroupName=NumCode}" Click="Upload_Click" Grid.Column="1" Grid.Row="1" Content="Загрузить" HorizontalAlignment="Right" Width="95"/>
         
         <Label x:Name="CurrencyCodeLabel" Grid.Column="1" Grid.Row="2" Content="Коды валют" HorizontalAlignment="Left"/>
 
-        <ListBox x:Name="CurrencyCodeList" DataContext="{Binding MajorIndexViewModel}" Grid.Column="1" Grid.Row="3"  HorizontalAlignment="Center" Width="200" Height="200"/>
+        <ListBox x:Name="CurrencyCodeList" DataContext="{Binding MajorIndexViewModel, BindingGroupName=NumCode}" Grid.Column="1" Grid.Row="3"  HorizontalAlignment="Center" Width="200" Height="200"/>
         
         <TextBox x:Name="SearchText" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Width="95" Height="25"/>
 
-        <Button x:Name="SearchButton" DataContext="{Binding MajorIndexViewModel}" Grid.Column="1" Grid.Row="6" Content="Поиск" HorizontalAlignment="Right" Width="95" Height="25"/>
+        <Button x:Name="SearchButton" DataContext="{Binding MajorIndexViewModel, BindingGroupName=NumCode}" Grid.Column="1" Grid.Row="6" Content="Поиск" HorizontalAlignment="Right" Width="95" Height="25"/>
         
         <Label x:Name="CurrencyTodayLabel" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Content="Курсы валют ЦБ на сегодня" HorizontalContentAlignment="Center"/>
 
@@ -49,9 +49,9 @@
         
         <Label x:Name="ConvertLabel" Grid.Column="3"  Grid.Row="4" Content="Конвертировать" HorizontalContentAlignment="Center"/>
 
-        <ComboBox x:Name="FirstCurrency" DataContext="{Binding MajorIndexViewModel}" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Width="200" Height="25"/>
+        <ComboBox x:Name="FirstCurrency" DataContext="{Binding MajorIndexViewModel, BindingGroupName=CharCode}" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Width="200" Height="25"/>
 
-        <ComboBox x:Name="SecondCurrency" DataContext="{Binding MajorIndexViewModel}" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Width="200" Height="25"/>
+        <ComboBox x:Name="SecondCurrency" DataContext="{Binding MajorIndexViewModel, BindingGroupName=CharCode}" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Width="200" Height="25"/>
         
         <ListBox x:Name="FirstCurrencyList" Grid.Column="4" Grid.Row="5" HorizontalAlignment="Right" Width="125" Height="25"/>
         

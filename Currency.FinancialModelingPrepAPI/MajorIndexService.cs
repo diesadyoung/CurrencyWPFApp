@@ -37,6 +37,8 @@ namespace Currency.FinancialModelingPrepAPI
                     return "AUD";
             }
         }
+
+        
     }
 }
 

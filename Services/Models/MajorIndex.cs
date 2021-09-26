@@ -46,7 +46,8 @@ namespace Services.Models
 
     public class MajorIndex
     {
-
+        public DateTime Date { get; set; }
+        public  int NumCode { get; set; }
 
         public int Nominal { get; set; }
 
